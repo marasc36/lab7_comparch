@@ -1,0 +1,11 @@
+module lab7_off(in, offset, out, cout);
+	input [7:0] in,offset;
+	output [7:0] out;
+	output cout;
+	wire cin;
+
+	
+	assign out = (in^offset) ^ cin;
+   assign cout = (in&cin)| (in&offset) | (offset&cin);
+	
+endmodule 
